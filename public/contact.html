@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omkar Panchal | Full Stack Web Developer</title>
+    <link rel="icon" href="./images/favicon/favicon-32.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- Header  -->
+    <header>
+        <nav class="navbar">
+            <div class="logo"><img src="./images/logo.svg" alt=""></div>
+            <div class="navlink">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Me</a>
+                <a href="blog.html">Blogs</a>
+                <a href="project.html">Projects</a>
+                <a href="contact.html">Contact Me</a>
+            </div>
+            <div><button> Sign In</button></div>
+        </nav>
+    </header>
+
+    <!-- Main  -->
+    <div class="contact-section">
+        <main>
+            <div class="contact-container">
+                <h2>Contact Me</h2>
+                <form class="contact-form">
+                    <input type="text" id="name" name="name" placeholder="Name" required>
+
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+
+                    <textarea id="message" name="message" rows="4" placeholder="Message" required></textarea>
+
+                    <button id="submitForm" type="submit">Submit</button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer  -->
+    <footer>
+        <div class="footer-info">
+            <div>
+                <h2>Start a Project</h2>
+            </div>
+            <div>
+                <p>Interested in creating beautifull Website
+                    I’m always open to discussing product design work , Just share your Idea with
+                    me.</p>
+            </div>
+            <div><button>Let's do it</button></div>
+        </div>
+        <div class="footer-links">
+            <a href="">Linkedin</a>
+            <a href="">GitHub</a>
+            <a href="">Facebook</a>
+            <a href="">Instagram</a>
+            <a href="">Download CV</a>
+        </div>
+    </footer>
+
+    <!-- Script for Submitting form in database  -->
+    <script>
+        const Name = document.getElementById("name");
+        const Email = document.getElementById("email");
+        const Message = document.getElementById("message");
+        const SubmitForm = document.getElementById("submitForm");
+
+        SubmitForm.addEventListener("click", async (e) => {
+            e.preventDefault();
+            if (!Name.value.trim() || !Email.value.trim() || !Message.value.trim()) {
+                alert('All fields are mandatory');
+                return; // Stop the function execution
+            }
+            if (!Email.value.trim() || !Email.value.includes("@")) {
+                alert('Please enter a valid email ');
+                return;
+            }
+            const obj = {
+                name: Name.value,
+                email: Email.value,
+                message: Message.value
+            };
+            try {
+                const response = await fetch(`http://64.227.132.137/api/contact`, {
+                    method: "POST",
+                    headers: {
+                        "Content-type": "application/json"
+                    },
+                    body: JSON.stringify(obj)
+                });
+                // Resetting form to its initial state
+                SubmitForm.form.reset();
+
+            } catch (error) {
+                console.error('An error occurred:', error);
+            }
+
+        });
+    </script>
+    <script src="./script.js"></script>
+</body>
+
+</html>

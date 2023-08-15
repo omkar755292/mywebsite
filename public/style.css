@@ -1,0 +1,252 @@
+/* Writing a common CSS for the Website  */
+* {
+    text-align: center;
+    justify-content: center;
+    line-height: 2;
+    text-decoration: none;
+    list-style: none;
+}
+
+h1 {
+    font-size: 29px;
+    font-weight: 800;
+}
+
+p {
+    font-size: 22px;
+}
+
+/* Navigation Bar CSS is Written here  */
+.navbar {
+    padding-top: 4vw;
+    display: flex;
+}
+
+.logo img {
+    width: 50px;
+}
+
+.navlink {
+    width: 70%;
+}
+
+.navlink a {
+    color: black;
+    padding: 0.5vw 1vw;
+    margin: 1vw 0.5vw;
+    font-size: 22px;
+    margin-top: 2vw;
+}
+
+.navlink a:hover {
+    color: rgb(120, 15, 255);
+
+}
+
+.navbar button {
+    background-color: white;
+    color: rgb(120, 15, 255);
+    padding: 0.5vw 2vw;
+    border: 2px solid rgb(120, 15, 255);
+    font-size: 15px;
+    border-radius: 25px;
+}
+
+/* CSS for home section  */
+
+.home-container {
+    padding-top: 2vw;
+}
+
+.home-container img {
+    width: 50%;
+
+}
+
+/* CSS for about section  */
+
+.about-container {
+    background-color: rgb(120, 15, 255);
+    padding: 4vw;
+    color: white;
+}
+
+/* Css for Project section  */
+.project-section {
+    padding: 2vw;
+}
+
+.project-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.project {
+    background-color: rgba(251, 251, 251, 0.453);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    margin: 1vw;
+    padding: 20px;
+}
+
+.project img {
+    width: 300px;
+    height: 200px;
+}
+
+.project p {
+    font-size: 18px;
+}
+
+.project button {
+    font-size: 17px;
+    color: rgb(120, 15, 255);
+    background-color: transparent;
+    padding: 1px 10vw;
+    border: 1px solid rgb(120, 15, 255);
+}
+
+/* CSS for Blog section  */
+.blog-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 1vw;
+    padding-top: 3vw;
+}
+
+.blog-container main {
+    flex: 2;
+}
+
+.blog-post {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.blog-article {
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.blog-content {
+    font-size: 16px;
+}
+
+.blog-button {
+    margin-top: 2vw;
+    padding: 0vw 2vw;
+}
+
+/* CSS for internship section  */
+
+.internship-section {
+
+    padding: 3vw 12vw;
+}
+
+.internship-info {
+    padding-bottom: 2vw;
+}
+
+.internship-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.internship img {
+    margin: 2vw;
+    width: 150px;
+}
+
+/* contact css is written here  */
+
+/* .contact-section{
+    padding: 3vw 20vw;
+  } */
+.contact-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 50px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form {
+    padding: 2vw;
+    margin-bottom: 30px;
+}
+
+.contact-container input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form button {
+    width: 100%;
+    background-color: rgb(120, 15, 255);
+    color: white;
+}
+
+.contact-form button:hover {
+    background-color: white;
+    color: rgb(120, 15, 255);
+}
+
+/* CSS for Footer section  */
+
+.footer-info {
+    display: flex;
+    background-color: rgba(35, 6, 98, 0.942);
+    color: white;
+}
+
+.footer-info p {
+    padding-top: 0.8vw;
+    font-size: 18px;
+}
+
+.footer-info button {
+    margin-top: 1.5vw;
+    background-color: transparent;
+    color: white;
+    padding: 0.5vw 3vw;
+    font-size: 15px;
+    border: solid rgb(120, 15, 255);
+    border-radius: 25px;
+}
+
+.footer-info div {
+    padding: 0vw 3vw;
+}
+
+.footer-links {
+    display: inline;
+}
+
+.footer-links a {
+    margin: 0vw 0.5vw;
+    color: rgb(120, 15, 255);
+}
+
+/* Button CSS is written here  */
+button {
+    background-color: transparent;
+    color: rgb(120, 15, 255);
+    border: 2px solid rgb(120, 15, 255);
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+button:hover {
+    background-color: rgb(120, 15, 255);
+    color: white;
+}
