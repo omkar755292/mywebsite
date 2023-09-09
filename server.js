@@ -3,8 +3,8 @@ const env = require('dotenv');
 const path = require('path');
 
 env.config(); //Configuring hostname and port from env file
-hostname = process.env.HOSTNAME
-port = process.env.PORT
+hostname = process.env.HOSTNAME || 'localhost' ;
+port = process.env.PORT || 3000;
 
 const app = express();
 
